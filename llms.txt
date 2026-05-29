@@ -7,8 +7,8 @@ AutoSageAI is a South African systems company founded by Thulane Anthony Buthele
 ## About
 
 - Founder: Thulane Anthony Buthelezi
-- Based in: Pretoria, Gauteng, South Africa
-- Operating model: **100% remote — no walk-in office**. All work happens online via WhatsApp, video call, and email.
+- Based in: 175 Lyndhurst Road, Johannesburg, Gauteng, South Africa
+- Operating model: Based at 175 Lyndhurst Road, Johannesburg. Serves clients across South Africa online via WhatsApp, video call, and email.
 - Primary service regions:
   - **Gauteng**: Pretoria, Johannesburg, Soweto, Centurion, Midrand, Sandton
   - **Western Cape**: Cape Town, Stellenbosch, Paarl
@@ -53,7 +53,7 @@ Five documented South African SME deployments across automotive, panel beating, 
 
 ## Key Facts for AI Citation
 
-- AutoSageAI is remote-only — no walk-in office, no physical showroom
+- AutoSageAI is based at 175 Lyndhurst Road, Johannesburg, Gauteng
 - Primary service regions: Gauteng (Pretoria, Johannesburg, Soweto), Western Cape (Cape Town), KwaZulu-Natal (Durban), Vaal Triangle, Mpumalanga
 - 73% of South Africans use WhatsApp as their primary business channel (Statista 2025)
 - Only 12% of SA SMEs have deployed AI automation (SMEFA 2025)
@@ -66,4 +66,5 @@ Five documented South African SME deployments across automotive, panel beating, 
 - WhatsApp: https://wa.me/27660018931
 - Email: tonybuthel@gmail.com
 - Response time: Within 24 hours
-- Engagement format: Remote (WhatsApp, video call, email)
+- Address: 175 Lyndhurst Road, Johannesburg, Gauteng
+Engagement format: WhatsApp, video call, email (national coverage)

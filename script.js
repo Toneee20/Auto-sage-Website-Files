@@ -403,3 +403,97 @@ function initCatalogueAnims(){
     _catObs.observe(el);
   });
 }
+// ── TERMS & CONDITIONS INJECTION ──────────────────────────────────────────────
+(function(){
+
+  // 1. Inject popup HTML into body
+  var overlay = document.createElement('div');
+  overlay.id = 'tc-overlay';
+  overlay.style.cssText = 'display:none;position:fixed;inset:0;z-index:99999;background:rgba(0,0,8,.93);backdrop-filter:blur(12px);overflow-y:auto;';
+  overlay.innerHTML = `
+    <div style="max-width:800px;margin:0 auto;padding:24px 16px 60px;font-family:'Space Grotesk',sans-serif;">
+      <div style="position:sticky;top:0;z-index:10;background:rgba(0,0,8,.97);border-bottom:1px solid rgba(176,190,197,.12);padding:16px 0 14px;display:flex;align-items:center;justify-content:space-between;margin-bottom:0;">
+        <div>
+          <div style="font-family:'Orbitron',sans-serif;font-size:13px;font-weight:700;color:#fff;letter-spacing:1px;">AutoSageAI</div>
+          <div style="font-size:10px;color:#4FC3F7;letter-spacing:2px;text-transform:uppercase;">Terms &amp; Conditions</div>
+        </div>
+        <button id="tc-close" style="background:transparent;border:1px solid rgba(176,190,197,.3);color:#b0bec5;font-size:18px;width:36px;height:36px;border-radius:6px;cursor:pointer;">✕</button>
+      </div>
+      <div style="text-align:center;padding:40px 0 36px;border-bottom:1px solid rgba(176,190,197,.1);">
+        <div style="display:inline-block;background:rgba(79,195,247,.1);border:1px solid rgba(79,195,247,.2);color:#4FC3F7;font-size:11px;font-weight:700;letter-spacing:3px;padding:5px 14px;border-radius:20px;text-transform:uppercase;margin-bottom:16px;">Legal</div>
+        <h2 style="font-family:'Orbitron',sans-serif;font-size:clamp(20px,4vw,30px);font-weight:700;color:#fff;margin-bottom:12px;">Terms &amp; Conditions</h2>
+        <p style="color:#b0bec5;font-size:14px;max-width:540px;margin:0 auto;">Please read these terms carefully before purchasing any product or service from AutoSageAI.</p>
+        <div style="margin-top:12px;font-size:12px;color:#78909c;">Effective Date: 1 June 2026 · AutoSageAI (Pty) Ltd</div>
+      </div>
+      <div id="tc-sections" style="color:#b0bec5;font-size:14px;line-height:1.75;"></div>
+      <div style="background:rgba(79,195,247,.05);border:1px solid rgba(79,195,247,.15);border-radius:12px;padding:28px;text-align:center;margin-top:36px;">
+        <h3 style="font-family:'Orbitron',sans-serif;font-size:14px;color:#fff;margin-bottom:8px;">Questions about our terms?</h3>
+        <p style="font-size:13px;color:#b0bec5;margin-bottom:16px;">Reach out directly — we respond within 24 hours.</p>
+        <a href="https://wa.me/27660018931?text=Hi%20AutoSageAI%2C%20I%20have%20a%20question%20about%20your%20Terms%20and%20Conditions" target="_blank" style="display:inline-block;padding:11px 26px;background:#4FC3F7;color:#000008;font-weight:700;font-size:13px;border-radius:8px;text-decoration:none;">WhatsApp Us Now</a>
+      </div>
+      <div style="text-align:center;padding:28px 0 0;margin-top:28px;border-top:1px solid rgba(176,190,197,.1);">
+        <p style="color:#78909c;font-size:12px;margin-bottom:8px;">© 2026 AutoSageAI · Structured Intelligence. Delivered.</p>
+        <button id="tc-close2" style="background:transparent;border:1px solid rgba(176,190,197,.25);color:#b0bec5;font-size:12px;padding:7px 18px;border-radius:6px;cursor:pointer;">Close Terms</button>
+      </div>
+    </div>`;
+  document.body.appendChild(overlay);
+
+  // 2. Populate sections
+  var sections = [
+    ['1','Services Provided','AutoSageAI provides digital business solutions including AI-powered websites, AI automation systems and WhatsApp agents, business workflow automation and digital marketing, custom software development, subscription-based hosting/maintenance/SEO services, and domain registration and Google Business Profile management. All services are delivered digitally unless otherwise agreed in writing.'],
+    ['2','Subscription Packages','Subscription fees are charged automatically on your selected billing cycle. Monthly subscriptions renew automatically unless cancelled before the next billing date. Annual subscriptions renew automatically unless cancelled before the renewal date. Pricing may change with 30 days prior notice. Failure of payment may result in suspension or termination of service.'],
+    ['3','Service Delivery Timeline','Basic websites are delivered within <span style="color:#FFB300;font-weight:600;">24–72 hours</span> of receiving all required content. Basic automation systems are deployed within <span style="color:#FFB300;font-weight:600;">48 hours</span>. Full operational builds take up to <span style="color:#FFB300;font-weight:600;">14 days</span>. Timelines are estimates, not guaranteed completion dates. Delays caused by client failure to provide information or approvals may extend timelines.<br><br><div style="background:rgba(79,195,247,.05);border-left:3px solid #4FC3F7;padding:12px 16px;border-radius:0 8px 8px 0;font-size:13px;"><strong style="color:#4FC3F7;">Note:</strong> DNS propagation for newly registered domains takes 2–24 hours and is outside of AutoSageAI\'s control. This does not constitute a delay in delivery.</div>'],
+    ['4','7-Day Satisfaction Refund Policy','A refund request must be submitted within <strong style="color:#fff;">7 calendar days</strong> of service delivery, clearly explain why the work is unsatisfactory, and allow our team reasonable opportunity to correct the issue. Refunds may be approved if the delivered work materially differs from what was agreed, quality falls substantially below agreed standards, or AutoSageAI fails to deliver without valid reason. Send requests to <a href="mailto:tonybuthel@gmail.com" style="color:#4FC3F7;">tonybuthel@gmail.com</a> or WhatsApp <span style="color:#FFB300;font-weight:600;">066 001 8931</span>.'],
+    ['5','Non-Refundable Situations','Refunds will <strong style="color:#fff;">NOT</strong> be granted if: work has been fully approved by the customer; the customer changes requirements after work has commenced; delays are caused by the customer\'s failure to provide materials; subscription billing periods have already been consumed; digital products or completed automation systems have been delivered and accepted; the customer changes their mind after work has begun; or DNS propagation/third-party platform delays occur after correct setup.'],
+    ['6','Cancellation Policy','Monthly subscriptions require cancellation before the next billing cycle. Annual subscriptions must be cancelled before the renewal date. Cancellation stops future billing only — previous payments are subject to the refund policy. Cancellation requests must be submitted via email or WhatsApp.'],
+    ['7','Customer Responsibilities','Customers agree to: provide accurate business information and content when requested; respond promptly during project development (within 48 hours); supply required content, branding, documents, credentials, or approvals when needed; use all AutoSageAI services legally and in compliance with South African law; and not use AutoSageAI platforms for unlawful, harmful, or deceptive purposes.'],
+    ['8','Intellectual Property','All custom work (websites, content, design) becomes the customer\'s property after <strong style="color:#fff;">final payment</strong>. Proprietary systems, frameworks, and automation engines created by AutoSageAI remain our intellectual property. Customers may not resell, reverse-engineer, or redistribute AutoSageAI\'s proprietary systems without written consent.'],
+    ['9','Limitation of Liability','AutoSageAI is not responsible for third-party software outages, hosting provider failures, DNS propagation delays, or losses from misuse of our services. Our total liability is limited to the amount paid by the customer for the specific service in question.'],
+    ['10','Payment Processing','All payments are processed through approved third-party providers. AutoSageAI does not store customer banking details. Payments accepted include EFT, bank transfer, and PayFast.'],
+    ['11','Fraud Prevention','AutoSageAI reserves the right to refuse or reverse suspicious transactions, verify customer identity, cancel fraudulent purchases without refund, and report suspected fraud to South African authorities.'],
+    ['12','Changes to These Terms','We may update these Terms at any time. Updated versions are published on our website at <a href="https://www.autosageai.co.za/terms" style="color:#4FC3F7;">autosageai.co.za/terms</a> and become effective immediately. Continued use of our services constitutes acceptance of revised terms.'],
+    ['13','Contact &amp; Disputes','For support, billing questions, cancellations, or refund requests contact us first — we resolve most matters within 24 hours.<br><br><strong style="color:#fff;">Email:</strong> <a href="mailto:tonybuthel@gmail.com" style="color:#4FC3F7;">tonybuthel@gmail.com</a><br><strong style="color:#fff;">WhatsApp:</strong> 066 001 8931<br><strong style="color:#fff;">Website:</strong> <a href="https://www.autosageai.co.za" style="color:#4FC3F7;">www.autosageai.co.za</a><br><strong style="color:#fff;">Location:</strong> Johannesburg, South Africa']
+  ];
+  var html = '';
+  sections.forEach(function(s){
+    html += '<div style="padding:28px 0;border-bottom:1px solid rgba(176,190,197,.1);">'
+      + '<h3 style="font-family:\'Orbitron\',sans-serif;font-size:12px;font-weight:700;color:#4FC3F7;letter-spacing:1px;text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:10px;">'
+      + '<span style="display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:rgba(79,195,247,.12);border:1px solid rgba(79,195,247,.25);font-size:10px;flex-shrink:0;">'+s[0]+'</span>'+s[1]+'</h3>'
+      + '<p style="margin:0;font-size:14px;color:#b0bec5;line-height:1.75;">'+s[2]+'</p></div>';
+  });
+  document.getElementById('tc-sections').innerHTML = html;
+
+  // 3. Close handlers
+  function closeTC(){ overlay.style.display='none'; document.body.style.overflow=''; overlay.scrollTop=0; }
+  document.getElementById('tc-close').onclick = closeTC;
+  document.getElementById('tc-close2').onclick = closeTC;
+  overlay.addEventListener('click', function(e){ if(e.target===this) closeTC(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeTC(); });
+
+  // 4. Global open function
+  window.openTerms = function(e){ if(e) e.preventDefault(); overlay.style.display='block'; document.body.style.overflow='hidden'; };
+
+  // 5. Add Terms link to ALL footers on the page
+  document.addEventListener('DOMContentLoaded', function(){
+    addTermsLinks();
+  });
+  if(document.readyState==='complete'||document.readyState==='interactive'){
+    addTermsLinks();
+  }
+
+  function addTermsLinks(){
+    var ftlinks = document.querySelectorAll('.ftlinks');
+    ftlinks.forEach(function(fl){
+      if(!fl.querySelector('.tc-ftl')){
+        var div = document.createElement('div');
+        div.className = 'ftl tc-ftl';
+        div.style.cursor = 'pointer';
+        div.textContent = 'Terms & Conditions';
+        div.onclick = function(){ window.openTerms(); };
+        fl.appendChild(div);
+      }
+    });
+  }
+
+})();
+// ── END TERMS INJECTION ───────────────────────────────────────────────────────

@@ -2548,9 +2548,217 @@
 </div></div>
 <footer><div class="ftin">
   <div class="ftbrand"><span style="font-family:'Orbitron';font-size:11px;font-weight:600;letter-spacing:2px;color:var(--cy);">AutoSageAI</span><div style="font-size:10px;color:var(--mt);margin-top:4px;">&#169; 2026 AutoSageAI &#183; Structured Intelligence. Delivered.</div></div>
-  <div class="ftlinks"><div class="ftl" onclick="gP('home')">Home</div><div class="ftl" onclick="gP('home');setTimeout(()=>gS('blog'),140)">Blog</div></div>
+  <div class="ftlinks"><div class="ftl" onclick="gP('home')">Home</div><div class="ftl" onclick="gP('home');setTimeout(()=>gS('blog'),140)">Blog</div><div class="ftl" onclick="openTerms(event)" style="cursor:pointer;">Terms &amp; Conditions</div></div>
 </div></footer>
 </div>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     TERMS & CONDITIONS POPUP OVERLAY
+══════════════════════════════════════════════════════════════════ -->
+<div id="terms-overlay" style="display:none;position:fixed;inset:0;z-index:99999;background:rgba(0,0,8,.92);backdrop-filter:blur(12px);overflow-y:auto;">
+  <div style="max-width:800px;margin:0 auto;padding:24px 16px 60px;">
+    <!-- Header -->
+    <div style="position:sticky;top:0;z-index:10;background:rgba(0,0,8,.97);border-bottom:1px solid rgba(176,190,197,.12);padding:16px 0 14px;display:flex;align-items:center;justify-content:space-between;margin-bottom:0;">
+      <div>
+        <div style="font-family:'Orbitron',sans-serif;font-size:13px;font-weight:700;color:#ffffff;letter-spacing:1px;">AutoSageAI</div>
+        <div style="font-size:10px;color:#4FC3F7;letter-spacing:2px;text-transform:uppercase;">Terms &amp; Conditions</div>
+      </div>
+      <button onclick="document.getElementById('terms-overlay').style.display='none';document.body.style.overflow=''" style="background:transparent;border:1px solid rgba(176,190,197,.3);color:#b0bec5;font-size:18px;width:36px;height:36px;border-radius:6px;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1;">✕</button>
+    </div>
+
+    <!-- Hero -->
+    <div style="text-align:center;padding:40px 0 44px;border-bottom:1px solid rgba(176,190,197,.12);">
+      <div style="display:inline-block;background:rgba(79,195,247,.1);border:1px solid rgba(79,195,247,.2);color:#4FC3F7;font-size:11px;font-weight:700;letter-spacing:3px;padding:5px 14px;border-radius:20px;text-transform:uppercase;margin-bottom:18px;">Legal</div>
+      <h2 style="font-family:'Orbitron',sans-serif;font-size:clamp(20px,4vw,32px);font-weight:700;color:#ffffff;line-height:1.2;margin-bottom:14px;">Terms &amp; Conditions</h2>
+      <p style="color:#b0bec5;font-size:14px;max-width:560px;margin:0 auto;">Please read these terms carefully before purchasing any product or service from AutoSageAI. By proceeding, you agree to all terms set out below.</p>
+      <div style="margin-top:14px;font-size:12px;color:#78909c;">Effective Date: 1 June 2026 &nbsp;·&nbsp; AutoSageAI (Pty) Ltd</div>
+    </div>
+
+    <!-- Sections -->
+    <div id="tc-body" style="font-family:'Space Grotesk',sans-serif;color:#b0bec5;font-size:14px;line-height:1.75;">
+
+      <!-- Reusable section style via inline -->
+      <style>
+        .tc-sec{padding:32px 0;border-bottom:1px solid rgba(176,190,197,.1);}
+        .tc-sec:last-child{border-bottom:none;}
+        .tc-sec h3{font-family:'Orbitron',sans-serif;font-size:13px;font-weight:700;color:#4FC3F7;letter-spacing:1px;text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:10px;}
+        .tc-num{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:rgba(79,195,247,.12);border:1px solid rgba(79,195,247,.25);font-size:11px;font-family:'Orbitron',sans-serif;flex-shrink:0;color:#4FC3F7;}
+        .tc-sec p{color:#b0bec5;margin-bottom:12px;font-size:14px;}
+        .tc-sec p:last-child{margin-bottom:0;}
+        .tc-sec ul{margin:10px 0 12px;padding-left:0;list-style:none;}
+        .tc-sec ul li{color:#b0bec5;font-size:14px;padding:5px 0 5px 20px;position:relative;border-bottom:1px solid rgba(176,190,197,.05);}
+        .tc-sec ul li:last-child{border-bottom:none;}
+        .tc-sec ul li::before{content:'—';position:absolute;left:0;color:#4FC3F7;font-size:11px;}
+        .tc-hi{color:#FFB300;font-weight:600;}
+        .tc-note{background:rgba(79,195,247,.05);border:1px solid rgba(79,195,247,.15);border-left:3px solid #4FC3F7;padding:14px 18px;border-radius:0 8px 8px 0;margin:16px 0;}
+        .tc-note p{margin-bottom:0;font-size:13px;}
+        .tc-note strong{color:#4FC3F7;}
+      </style>
+
+      <div class="tc-sec">
+        <h3><span class="tc-num">1</span> Services Provided</h3>
+        <p>AutoSageAI provides digital business solutions including but not limited to:</p>
+        <ul>
+          <li>AI-powered websites and digital presence packages</li>
+          <li>AI automation systems and WhatsApp agents</li>
+          <li>Business workflow automation and digital marketing</li>
+          <li>Custom software development and operations platforms</li>
+          <li>Subscription-based digital services including hosting, maintenance, and SEO</li>
+          <li>Domain registration and Google Business Profile management</li>
+        </ul>
+        <p>All services are delivered digitally unless otherwise agreed in writing.</p>
+      </div>
+
+      <div class="tc-sec">
+        <h3><span class="tc-num">2</span> Subscription Packages</h3>
+        <p>Some services are offered on recurring subscription plans. By subscribing, you agree that:</p>
+        <ul>
+          <li>Subscription fees are charged automatically according to your selected billing cycle</li>
+          <li>Monthly subscriptions renew automatically unless cancelled before the next billing date</li>
+          <li>Annual subscriptions renew automatically unless cancelled before the renewal date</li>
+          <li>Pricing may change in the future with 30 days' prior notice to existing customers</li>
+          <li>Failure of payment may result in suspension or termination of service</li>
+        </ul>
+        <p>Subscriptions may include hosting, maintenance, AI platform access, technical support, software updates, SEO management, and ongoing business automation services.</p>
+      </div>
+
+      <div class="tc-sec">
+        <h3><span class="tc-num">3</span> Service Delivery Timeline</h3>
+        <p>Because our services involve digital creation and development, the following applies:</p>
+        <ul>
+          <li>Basic websites are delivered within <span class="tc-hi">24–72 hours</span> of receiving all required content</li>
+          <li>Basic automation systems are deployed within <span class="tc-hi">48 hours</span></li>
+          <li>Full operational builds take up to <span class="tc-hi">14 days</span></li>
+          <li>Estimated timelines are not guaranteed completion dates</li>
+          <li>Delays caused by client failure to provide information, approvals, or content may extend timelines</li>
+          <li>AutoSageAI reserves the right to adjust timelines for quality assurance</li>
+        </ul>
+        <div class="tc-note"><p><strong>Note:</strong> DNS propagation for newly registered domains takes 2–24 hours after setup and is an automatic internet process outside of AutoSageAI's control. This does not constitute a delay in delivery.</p></div>
+      </div>
+
+      <div class="tc-sec">
+        <h3><span class="tc-num">4</span> 7-Day Satisfaction Refund Policy</h3>
+        <p>If you are dissatisfied with work delivered, we offer a <span class="tc-hi">7-day refund review period</span> under the following conditions:</p>
+        <p>A refund request must:</p>
+        <ul>
+          <li>Be submitted within <strong style="color:#ffffff;">7 calendar days</strong> of service delivery</li>
+          <li>Clearly explain why the delivered work is unsatisfactory</li>
+          <li>Allow our team reasonable opportunity to correct or revise the issue before refund approval</li>
+        </ul>
+        <p>Refunds may be approved if the delivered work materially differs from what was agreed, quality falls substantially below agreed standards, or AutoSageAI fails to deliver without valid reason.</p>
+        <p>Send requests to <a href="mailto:tonybuthel@gmail.com" style="color:#4FC3F7;">tonybuthel@gmail.com</a> or WhatsApp <span class="tc-hi">066 001 8931</span>.</p>
+      </div>
+
+      <div class="tc-sec">
+        <h3><span class="tc-num">5</span> Non-Refundable Situations</h3>
+        <p>Refunds will <strong style="color:#ffffff;">NOT</strong> be granted if:</p>
+        <ul>
+          <li>Work has been fully approved by the customer</li>
+          <li>The customer changes project requirements after work has commenced</li>
+          <li>Delays are caused by the customer's failure to provide required materials</li>
+          <li>Subscription billing periods have already been consumed</li>
+          <li>Digital products, source code, or completed automation systems have been delivered and accepted</li>
+          <li>The customer simply changes their mind after work has begun</li>
+          <li>DNS propagation or third-party platform delays occur after correct setup</li>
+        </ul>
+      </div>
+
+      <div class="tc-sec">
+        <h3><span class="tc-num">6</span> Cancellation Policy</h3>
+        <ul>
+          <li>Monthly subscriptions require cancellation before the next billing cycle</li>
+          <li>Annual subscriptions must be cancelled before the renewal date</li>
+          <li>Cancellation stops future billing only — previous payments are subject to the refund policy</li>
+          <li>Cancellation requests must be submitted via email or WhatsApp</li>
+        </ul>
+      </div>
+
+      <div class="tc-sec">
+        <h3><span class="tc-num">7</span> Customer Responsibilities</h3>
+        <ul>
+          <li>Provide accurate business information and content when requested</li>
+          <li>Respond promptly during project development (within 48 hours)</li>
+          <li>Supply required content, branding, documents, credentials, or approvals when needed</li>
+          <li>Use all AutoSageAI services legally, ethically, and in compliance with South African law</li>
+          <li>Not use AutoSageAI platforms or systems for unlawful, harmful, or deceptive purposes</li>
+        </ul>
+      </div>
+
+      <div class="tc-sec">
+        <h3><span class="tc-num">8</span> Intellectual Property</h3>
+        <ul>
+          <li>All custom work (websites, content, design) becomes the customer's property after <strong style="color:#ffffff;">final payment</strong></li>
+          <li>Proprietary systems, frameworks, and automation engines created by AutoSageAI remain our intellectual property</li>
+          <li>Customers may not resell, reverse-engineer, or redistribute AutoSageAI's proprietary systems without written consent</li>
+        </ul>
+      </div>
+
+      <div class="tc-sec">
+        <h3><span class="tc-num">9</span> Limitation of Liability</h3>
+        <p>AutoSageAI is not responsible for third-party software outages, hosting provider failures, DNS propagation delays, or losses from misuse. Our total liability is limited to the amount paid for the specific service in question.</p>
+      </div>
+
+      <div class="tc-sec">
+        <h3><span class="tc-num">10</span> Payment Processing</h3>
+        <p>All payments are processed through approved third-party providers. AutoSageAI does not store customer banking details. Payments accepted include EFT, bank transfer, and PayFast.</p>
+      </div>
+
+      <div class="tc-sec">
+        <h3><span class="tc-num">11</span> Fraud Prevention</h3>
+        <p>AutoSageAI reserves the right to refuse suspicious transactions, verify customer identity, cancel fraudulent purchases without refund, and report suspected fraud to South African authorities.</p>
+      </div>
+
+      <div class="tc-sec">
+        <h3><span class="tc-num">12</span> Changes to These Terms</h3>
+        <p>We may update these Terms at any time. Updated versions are published on our website and become effective immediately. Continued use of our services constitutes acceptance of revised terms.</p>
+      </div>
+
+      <div class="tc-sec">
+        <h3><span class="tc-num">13</span> Contact &amp; Disputes</h3>
+        <ul>
+          <li><strong style="color:#ffffff;">Email:</strong> <a href="mailto:tonybuthel@gmail.com" style="color:#4FC3F7;">tonybuthel@gmail.com</a></li>
+          <li><strong style="color:#ffffff;">WhatsApp:</strong> 066 001 8931</li>
+          <li><strong style="color:#ffffff;">Website:</strong> <a href="https://www.autosageai.co.za" style="color:#4FC3F7;">www.autosageai.co.za</a></li>
+          <li><strong style="color:#ffffff;">Location:</strong> Johannesburg, South Africa</li>
+        </ul>
+      </div>
+
+    </div><!-- /tc-body -->
+
+    <!-- CTA -->
+    <div style="background:rgba(79,195,247,.05);border:1px solid rgba(79,195,247,.15);border-radius:12px;padding:28px;text-align:center;margin-top:40px;">
+      <h3 style="font-family:'Orbitron',sans-serif;font-size:14px;color:#ffffff;margin-bottom:8px;">Questions about our terms?</h3>
+      <p style="font-size:13px;color:#b0bec5;margin-bottom:18px;">Reach out directly — we respond within 24 hours.</p>
+      <a href="https://wa.me/27660018931?text=Hi%20AutoSageAI%2C%20I%20have%20a%20question%20about%20your%20Terms%20and%20Conditions" target="_blank" style="display:inline-block;padding:11px 26px;background:#4FC3F7;color:#000008;font-weight:700;font-size:13px;border-radius:8px;text-decoration:none;">WhatsApp Us Now</a>
+    </div>
+
+    <!-- Footer inside popup -->
+    <div style="text-align:center;padding:32px 0 0;margin-top:32px;border-top:1px solid rgba(176,190,197,.1);">
+      <p style="color:#78909c;font-size:12px;margin-bottom:6px;">© 2026 AutoSageAI · Structured Intelligence. Delivered.</p>
+      <button onclick="document.getElementById('terms-overlay').style.display='none';document.body.style.overflow=''" style="background:transparent;border:1px solid rgba(176,190,197,.25);color:#b0bec5;font-size:12px;padding:7px 18px;border-radius:6px;cursor:pointer;margin-top:8px;">Close Terms</button>
+    </div>
+
+  </div><!-- /inner -->
+</div><!-- /terms-overlay -->
+
+<script>
+// Global function to open Terms popup from anywhere in the page
+function openTerms(e){
+  if(e)e.preventDefault();
+  var o=document.getElementById('terms-overlay');
+  o.style.display='block';
+  document.body.style.overflow='hidden';
+  o.scrollTop=0;
+}
+// Close on backdrop click (outside the inner card)
+document.getElementById('terms-overlay').addEventListener('click',function(e){
+  if(e.target===this){this.style.display='none';document.body.style.overflow='';}
+});
+// Close on Escape key
+document.addEventListener('keydown',function(e){
+  if(e.key==='Escape'){var o=document.getElementById('terms-overlay');if(o.style.display!=='none'){o.style.display='none';document.body.style.overflow='';}}
+});
+</script>
 
 </body>
 </html>

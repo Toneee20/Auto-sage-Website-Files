@@ -554,29 +554,29 @@ function initCatalogueAnims(){
   else { document.addEventListener('DOMContentLoaded', addFooterLinks); }
 
 })();
-// ── END LEGAL INJECTION v2 ────────────────────────────────────────────────────
-// ── PORTFOLIO PAGE INJECTION ──────────────────────────────────────────────────
+// ── END LEGAL INJECTION v2 ────────────────────────────────────────────
+// -- PORTFOLIO PAGE INJECTION --------------------------------------------------
 (function(){
 
   var SITES = [
     {url:'mmagha-final-website.vercel.app', live:'https://mmagha-final-website.vercel.app/', iframe:true,
-     tag:'Automotive · Vereeniging', name:'MMAGHA Auto Mags, Rims &amp; Tyres',
-     desc:'Full service site for a Vaal Triangle wheel &amp; tyre workshop — service catalogue, gallery, blog, and WhatsApp-first contact flow.'},
-    {url:'fmdelectrical.co.za', live:'https://fmdelectrical.co.za/', iframe:false, icon:'⚡', label:'FMD Electrical',
-     tag:'Electrical · Solar · Security', name:'FMD Electrical (Pty) Ltd',
-     desc:'Custom domain build for a Vereeniging electrical, solar, and security specialist — credentials, services, and direct-call CTAs front and center.'},
+     tag:'Automotive &middot; Vereeniging', name:'MMAGHA Auto Mags, Rims &amp; Tyres',
+     desc:'Full service site for a Vaal Triangle wheel &amp; tyre workshop &mdash; service catalogue, gallery, blog, and WhatsApp-first contact flow.'},
+    {url:'fmdelectrical.co.za', live:'https://fmdelectrical.co.za/', iframe:false, icon:'&#9889;', label:'FMD Electrical',
+     tag:'Electrical &middot; Solar &middot; Security', name:'FMD Electrical (Pty) Ltd',
+     desc:'Custom domain build for a Vereeniging electrical, solar, and security specialist &mdash; credentials, services, and direct-call CTAs front and center.'},
     {url:'mammies-beauty-palace.vercel.app', live:'https://mammies-beauty-palace.vercel.app/', iframe:true,
      tag:'Beauty &amp; Wellness', name:"Mammie's Beauty Palace",
-     desc:'Luxury-positioned beauty salon site covering hair, nails, facials, brows &amp; lashes, and body treatments — built around WhatsApp bookings.'},
+     desc:'Luxury-positioned beauty salon site covering hair, nails, facials, brows &amp; lashes, and body treatments &mdash; built around WhatsApp bookings.'},
     {url:'dynamicspecs-files.vercel.app', live:'https://dynamicspecs-files.vercel.app/', iframe:true,
-     tag:'Healthcare · Optometry', name:'Dynamicspecs Optometrists',
-     desc:'Professional practice site for an optometrist in Vanderbijlpark CBD — clear service info and easy ways for patients to get in touch.'},
+     tag:'Healthcare &middot; Optometry', name:'Dynamicspecs Optometrists',
+     desc:'Professional practice site for an optometrist in Vanderbijlpark CBD &mdash; clear service info and easy ways for patients to get in touch.'},
     {url:'bob-hardware.vercel.app', live:'https://bob-hardware.vercel.app/', iframe:true,
      tag:'Hardware &amp; Building Materials', name:"Bob's Hardware",
-     desc:'Full e-commerce-style catalogue site for a Vaal Region hardware store — product categories, offers, and a built-in WhatsApp chat assistant for quotes.'},
+     desc:'Full e-commerce-style catalogue site for a Vaal Region hardware store &mdash; product categories, offers, and a built-in WhatsApp chat assistant for quotes.'},
     {url:'mobbed-funeral-parlor.vercel.app', live:'https://mobbed-funeral-parlor.vercel.app/', iframe:true,
      tag:'Memorial Services', name:'Mobbed Funeral Parlor',
-     desc:'A dignified, calm digital presence for a funeral services provider — built for families to find information and reach the team without friction.'}
+     desc:'A dignified, calm digital presence for a funeral services provider &mdash; built for families to find information and reach the team without friction.'}
   ];
 
   function cardHTML(s){
@@ -585,8 +585,8 @@ function initCatalogueAnims(){
       : '<div style="position:static;height:100%;background:linear-gradient(160deg,#0c1420,#0a0f18);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:#90a4ae;font-size:13px;text-align:center;padding:20px;">'
         +'<span style="font-size:1.8rem;">'+s.icon+'</span>'
         +'<span style="color:#fff;font-weight:600;font-size:1rem;">'+s.label+'</span>'
-        +'<span>This site blocks in-page previews<br>for security — view it directly.</span>'
-        +'<a href="'+s.live+'" target="_blank" rel="noopener" style="color:#FFB300;font-weight:600;font-size:.85rem;border:1px solid rgba(255,179,0,.4);padding:8px 18px;border-radius:6px;margin-top:4px;">Open Site →</a></div>';
+        +'<span>This site blocks in-page previews<br>for security &mdash; view it directly.</span>'
+        +'<a href="'+s.live+'" target="_blank" rel="noopener" style="color:#FFB300;font-weight:600;font-size:.85rem;border:1px solid rgba(255,179,0,.4);padding:8px 18px;border-radius:6px;margin-top:4px;">Open Site &rarr;</a></div>';
     return '<div style="background:#0d1420;border:1px solid rgba(176,190,197,.12);border-radius:14px;overflow:hidden;transition:border-color .25s ease,transform .25s ease;">'
       +'<div style="display:flex;align-items:center;gap:10px;padding:12px 16px;background:#101826;border-bottom:1px solid rgba(176,190,197,.1);">'
       +'<div style="display:flex;gap:6px;"><span style="width:9px;height:9px;border-radius:50%;background:#2a3441;display:inline-block;"></span><span style="width:9px;height:9px;border-radius:50%;background:#2a3441;display:inline-block;"></span><span style="width:9px;height:9px;border-radius:50%;background:#2a3441;display:inline-block;"></span></div>'
@@ -598,7 +598,7 @@ function initCatalogueAnims(){
       +'<h3 style="font-size:18px;margin-top:8px;font-weight:600;color:#fff;font-family:\'Orbitron\',sans-serif;">'+s.name+'</h3>'
       +'<p style="color:#90a4ae;font-size:13.5px;margin-top:8px;line-height:1.6;">'+s.desc+'</p>'
       +'<div style="display:flex;justify-content:space-between;align-items:center;margin-top:18px;">'
-      +'<a href="'+s.live+'" target="_blank" rel="noopener" style="font-size:13px;font-weight:600;color:#FFB300;display:flex;align-items:center;gap:6px;">Open Live Site →</a>'
+      +'<a href="'+s.live+'" target="_blank" rel="noopener" style="font-size:13px;font-weight:600;color:#FFB300;display:flex;align-items:center;gap:6px;">Open Live Site &rarr;</a>'
       +'<span style="font-size:11px;color:#90a4ae;font-family:\'Space Grotesk\',monospace;">Live</span></div></div></div>';
   }
 
@@ -610,13 +610,13 @@ function initCatalogueAnims(){
     page.style.cssText = 'display:none;';
     page.innerHTML =
       '<div style="position:sticky;top:0;z-index:40;display:flex;justify-content:space-between;align-items:center;padding:14px 6%;background:rgba(0,0,8,.9);backdrop-filter:blur(12px);border-bottom:1px solid rgba(176,190,197,.1);">'
-      +'<button onclick="gP(\'home\')" style="padding:8px 14px;border-radius:24px;background:rgba(79,195,247,.08);border:1px solid rgba(79,195,247,.25);color:#4FC3F7;font-family:\'Space Grotesk\',sans-serif;font-weight:600;font-size:13px;cursor:pointer;">← Back to Home</button>'
+      +'<button onclick="gP(\'home\')" style="padding:8px 14px;border-radius:24px;background:rgba(79,195,247,.08);border:1px solid rgba(79,195,247,.25);color:#4FC3F7;font-family:\'Space Grotesk\',sans-serif;font-weight:600;font-size:13px;cursor:pointer;">&larr; Back to Home</button>'
       +'<a href="https://wa.me/27660018931?text=Hi%2C%20I%27m%20browsing%20the%20portfolio" target="_blank" style="padding:8px 14px;border-radius:24px;background:#25d366;color:#fff;font-family:\'Space Grotesk\',sans-serif;font-weight:700;font-size:13px;text-decoration:none;display:inline-flex;align-items:center;gap:6px;">WhatsApp</a></div>'
 
       +'<section style="padding:60px 6% 50px;max-width:1100px;">'
-      +'<div style="font-family:\'Space Grotesk\',monospace;font-size:11px;color:#FFB300;letter-spacing:.12em;text-transform:uppercase;display:flex;align-items:center;gap:10px;margin-bottom:22px;"><span style="width:7px;height:7px;border-radius:50%;background:#3DDC84;display:inline-block;"></span>6 live builds · Vaal Triangle &amp; beyond</div>'
+      +'<div style="font-family:\'Space Grotesk\',monospace;font-size:11px;color:#FFB300;letter-spacing:.12em;text-transform:uppercase;display:flex;align-items:center;gap:10px;margin-bottom:22px;"><span style="width:7px;height:7px;border-radius:50%;background:#3DDC84;display:inline-block;"></span>6 live builds &middot; Vaal Triangle &amp; beyond</div>'
       +'<h1 style="font-family:\'Orbitron\',sans-serif;font-size:clamp(28px,5.5vw,46px);font-weight:700;line-height:1.1;color:#fff;max-width:780px;">Websites that turn <span style="background:linear-gradient(90deg,#FFB300,#FFD54F);-webkit-background-clip:text;background-clip:text;color:transparent;">missed calls</span> into booked customers.</h1>'
-      +'<p style="margin-top:22px;font-size:16px;color:#90a4ae;max-width:580px;line-height:1.65;">A working portfolio of sites built and shipped for South African small businesses — auto parts, electrical, beauty, optometry, hardware, and memorial services. Every card below is a real, live site.</p>'
+      +'<p style="margin-top:22px;font-size:16px;color:#90a4ae;max-width:580px;line-height:1.65;">A working portfolio of sites built and shipped for South African small businesses &mdash; auto parts, electrical, beauty, optometry, hardware, and memorial services. Every card below is a real, live site.</p>'
       +'<div style="display:flex;gap:44px;margin-top:42px;flex-wrap:wrap;">'
       +'<div><strong style="display:block;font-family:\'Orbitron\',sans-serif;font-size:30px;font-weight:700;color:#fff;">6</strong><span style="font-size:12px;color:#90a4ae;text-transform:uppercase;letter-spacing:.05em;">Sites Shipped</span></div>'
       +'<div><strong style="display:block;font-family:\'Orbitron\',sans-serif;font-size:30px;font-weight:700;color:#fff;">6</strong><span style="font-size:12px;color:#90a4ae;text-transform:uppercase;letter-spacing:.05em;">Industries Served</span></div>'
@@ -631,10 +631,10 @@ function initCatalogueAnims(){
       +'<section style="padding:50px 6% 70px;text-align:center;">'
       +'<div style="background:rgba(79,195,247,.05);border:1px solid rgba(79,195,247,.15);border-radius:16px;padding:44px 28px;max-width:680px;margin:0 auto;">'
       +'<h3 style="font-family:\'Orbitron\',sans-serif;font-size:20px;color:#fff;margin-bottom:12px;">Want your business looking like this?</h3>'
-      +'<p style="color:#90a4ae;font-size:14px;margin-bottom:24px;">Basic sites delivered in 24–72 hours. Full systems in 14 days.</p>'
-      +'<button onclick="gP(\'discovery\')" style="padding:13px 30px;background:#4FC3F7;color:#000008;font-weight:700;font-size:14px;border-radius:8px;border:none;cursor:pointer;font-family:\'Space Grotesk\',sans-serif;">Get Started →</button></div></section>'
+      +'<p style="color:#90a4ae;font-size:14px;margin-bottom:24px;">Basic sites delivered in 24-72 hours. Full systems in 14 days.</p>'
+      +'<button onclick="gP(\'discovery\')" style="padding:13px 30px;background:#4FC3F7;color:#000008;font-weight:700;font-size:14px;border-radius:8px;border:none;cursor:pointer;font-family:\'Space Grotesk\',sans-serif;">Get Started &rarr;</button></div></section>'
 
-      +'<footer style="text-align:center;padding:28px 6%;border-top:1px solid rgba(176,190,197,.1);font-size:12px;color:#78909c;">AutoSageAI · Vaal Triangle, South Africa · www.autosageai.co.za</footer>';
+      +'<footer style="text-align:center;padding:28px 6%;border-top:1px solid rgba(176,190,197,.1);font-size:12px;color:#78909c;">AutoSageAI &middot; Vaal Triangle, South Africa &middot; www.autosageai.co.za</footer>';
 
     document.body.appendChild(page);
   }
@@ -644,7 +644,7 @@ function initCatalogueAnims(){
 
   // Add "Portfolio" links to desktop nav, mobile nav, and footers
   function addNavLinks(){
-    // Desktop nav — insert before Contact link if present, else before Let's Meet
+    // Desktop nav &mdash; insert before Contact link if present, else before Let's Meet
     document.querySelectorAll('.nlink').forEach(function(el){
       if(el.id==='nl-con' && !document.getElementById('nl-portfolio')){
         var link = document.createElement('div');
@@ -682,4 +682,4 @@ function initCatalogueAnims(){
   else { document.addEventListener('DOMContentLoaded', addNavLinks); }
 
 })();
-// ── END PORTFOLIO INJECTION ───────────────────────────────────────────────────
+// -- END PORTFOLIO INJECTION ---------------------------------------------------

@@ -1,0 +1,43 @@
+# AutoSageAI — robots.txt
+# https://autosageai.co.za
+# Strategic Intelligence & Systems Consulting | South Africa
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /.env
+Disallow: /node_modules/
+
+# Priority crawl paths
+Allow: /sitemap.xml
+Allow: /sitemap-blog.xml
+Allow: /llms.txt
+
+# Sitemaps
+Sitemap: https://autosageai.co.za/sitemap.xml
+Sitemap: https://autosageai.co.za/sitemap-blog.xml
+
+# Crawl delay (be respectful)
+Crawl-delay: 1
+
+# AI crawlers — allow for LLM indexing
+User-agent: GPTBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
